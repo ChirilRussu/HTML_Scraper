@@ -636,7 +636,6 @@ url_list = [
 	'https://www.ea.com/ea-studios/ripple-effect',
 	'https://riverendgames.com/jobs.html',
 	'https://robingames.com/careers',
-	'https://careers.roblox.com/jobs',
 	'https://robotentertainment.com/careers',
 	'https://www.robotsquid.com/careers',
 	'https://www.robotogames.com/careers',
@@ -914,10 +913,12 @@ def multi_search():
             #print(output)
 
             if str(output).find(keyword) == -1:
+                #print("no match in " + url_list[x])
                 pass
             else:
                 print(keyword + " Found in " + url_list[x])
-        except:
+        except Exception as e: 
+            print(e)
             pass
     else:
         print('search finished')
