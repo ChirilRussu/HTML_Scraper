@@ -7504,7 +7504,7 @@ def multi_search():
             else:
                 print(keyword + " Found in " + url_list[x])
         except Exception as e: 
-            print(e)
+            # print(e) # debug
             pass
     else:
         print('search finished')
